@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/paciente.css">
+	<title>Meus Pacientes</title>
+</head>
+<body>
+	<header>
+		<div class="recipiente">
+			<h1 class="fontsize1b">Calculadora Imc</h1>
+		</div>
+	</header>
+	<main class="conteudo">
+		<section>
+			<h2 class="fontsize2">Meus pacientes</h2>
+			<table>
+			<thead class="tabelaHead">
+				<tr>
+					<th class="font700">Nome</th>
+					<th class="font700">Peso</th>
+					<th class="font700">Altura</th>
+					<th class="font700">IMC</th>
+				</tr>
+			</thead>
+			<tbody class="tBody">	
+				<tr class="paciente">
+					<td class="info-nome">Rosberg</td>
+					<td class="info-peso">64</td>
+					<td class="info-altura">1.75</td>
+					<td class="info-imc"></td>
+				</tr>
+			</tbody>	
+			</table>
+			<button class="btn" id="calcula-imcs" onclick="calculaTodosImcs()">Calcular Imcs</button>
+		</section>
+
+		<section>
+			<h2 class="fontsize2">Adicionar novo paciente</h2>
+			<form>
+				<fieldset>
+					<label for="nome">Nome:</label><br>
+					<input id="campo-nome" type="text" placeholder="nome do seu paciente">
+				</fieldset>
+				<fieldset class="campo-medio">
+					<label for="nome">Peso:</label><br>
+					<input id="campo-peso" type="text" onkeyup="substituiVirgula(this)" placeholder="peso do seu paciente">
+				</fieldset>
+				<fieldset class="campo-medio">
+					<label for="nome">Altura:</label><br>
+					<input id="campo-altura" type="text" onkeyup="substituiVirgula(this)" placeholder="altura do seu paciente">
+				</fieldset>
+				<button class="btn" id="adicionar-paciente">Adicionar</button>
+			</form>
+		</section>
+	</main>
+	<script src="js/percorre.js"></script>
+	<script src="js/calcula-imc.js"></script>
+	<script src="js/imprime-nome.js"></script>
+	<script src="js/adiciona.js"></script>
+</body>
+</html>
